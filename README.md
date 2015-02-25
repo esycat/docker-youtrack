@@ -12,6 +12,6 @@ Pull the image, create a new container and start it:
 
 ```bash
 docker pull esycat/youtrack
-docker create --name youtrack -p 8080:8080 esycat/upsource 
+docker create --name youtrack -p 8080:8080 esycat/youtrack 
 docker start youtrack
 ```
