@@ -2,7 +2,7 @@ FROM esycat/java:oracle-8
 
 MAINTAINER "Eugene Janusov" <esycat@gmail.com>
 
-ENV YOUTRACK_BUILD 6.0.12619
+ENV YOUTRACK_BUILD 6.0.12634
 ENV YOUTRACK_PORT 8080
 ENV YOUTRACK_USER youtrack
 ENV YOUTRACK_SUFFIX youtrack
