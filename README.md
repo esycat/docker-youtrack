@@ -3,7 +3,7 @@
 
 [YouTrack](https://jetbrains.com/youtrack/) is an issue tracking and project management tool from [JetBrains](https://jetbrains.com/).
 
-Version `6.5`, build `16853` (released October 30, 2015).
+Version `6.5`, build `16953` (released December 10, 2015).
 
 The image based on [Ubuntu 14.04 LTS](https://registry.hub.docker.com/u/esycat/java/) with [Oracle Java 8](https://registry.hub.docker.com/u/esycat/java/).
 
