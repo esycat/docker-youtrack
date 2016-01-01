@@ -1,0 +1,11 @@
+youtrack:
+    # build: .
+    image: esycat/youtrack
+    container_name: youtrack
+    restart: always
+    ports:
+        - 80:8080
+    volumes:
+        - /etc/localtime:/etc/localtime:ro
+        - /data/youtrack:/var/lib/youtrack
+        - /data/youtrack/conf:/opt/youtrack/conf
