@@ -1,5 +1,6 @@
 # YouTrack
-[![](https://badge.imagelayers.io/esycat/youtrack:latest.svg)](https://imagelayers.io/?images=esycat/youtrack:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/esycat/youtrack.svg)](https://microbadger.com/images/esycat/youtrack "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/esycat/youtrack.svg)](https://microbadger.com/images/esycat/youtrack "Get your own version badge on microbadger.com")
 
 [YouTrack](https://jetbrains.com/youtrack/) is an issue tracking and project management tool from [JetBrains](https://jetbrains.com/).
 
