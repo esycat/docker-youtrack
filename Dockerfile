@@ -2,12 +2,13 @@ FROM esycat/java:oracle-8
 
 MAINTAINER "Eugene Janusov" <esycat@gmail.com>
 
-ENV APP_VERSION 6.5
-ENV APP_BUILD 17057
+ENV APP_VERSION 7.0
+ENV APP_BUILD 27477
 ENV APP_PORT 8080
 ENV APP_USER youtrack
 ENV APP_SUFFIX youtrack
 
+ENV APP_DISTNAME youtrack-${APP_BUILD}
 ENV APP_DISTFILE youtrack-${APP_VERSION}.${APP_BUILD}.zip
 ENV APP_PREFIX /opt
 ENV APP_DIR $APP_PREFIX/$APP_SUFFIX
@@ -22,10 +23,11 @@ RUN chown -R $APP_USER:$APP_USER $APP_HOME
 # downloading and unpacking the distribution, removing bundled JVMs
 WORKDIR $APP_PREFIX
 RUN wget -q https://download.jetbrains.com/charisma/$APP_DISTFILE && \
-    unzip -q $APP_DISTFILE -d $APP_DIR && \
-    rm $APP_DISTFILE && \
+    unzip -q $APP_DISTFILE && \
+    mv $APP_DISTNAME $APP_SUFFIX && \
+    chown -R $APP_USER:$APP_USER $APP_DIR && \
     rm -rf $APP_DIR/internal/java && \
-    chown -R $APP_USER:$APP_USER $APP_DIR
+    rm $APP_DISTFILE
 
 USER $APP_USER
 WORKDIR $APP_DIR
