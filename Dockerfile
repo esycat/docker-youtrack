@@ -13,7 +13,7 @@ LABEL \
 ENV APP_NAME=youtrack \
     APP_PORT=8080 \
     APP_UID=500 \
-    APP_PREFIX=/opt
+    APP_PREFIX=/srv
 
 ENV APP_USER=$APP_NAME \
     APP_DIR=$APP_PREFIX/$APP_NAME \
@@ -29,7 +29,7 @@ WORKDIR $APP_PREFIX
 # downloading build dependencies,
 # downloading and unpacking the distribution, changing file permissions, removing bundled JVMs,
 # removing build dependencies
-RUN apk add -q --no-cache --virtual .build-deps wget unzip && \
+RUN apk add -q --no-cache --virtual .build-deps wget && \
     wget -qO ${APP_NAME}.zip https://download.jetbrains.com/charisma/youtrack-${APP_VERSION}.${APP_BUILD}.zip && \
     unzip -q ${APP_NAME}.zip -x */internal/java/* && \
     mv youtrack-${APP_BUILD} $APP_NAME && \
