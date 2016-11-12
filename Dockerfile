@@ -29,13 +29,11 @@ WORKDIR $APP_PREFIX
 # downloading build dependencies,
 # downloading and unpacking the distribution, changing file permissions, removing bundled JVMs,
 # removing build dependencies
-RUN apk add -q --no-cache --virtual .build-deps wget && \
-    wget -qO ${APP_NAME}.zip https://download.jetbrains.com/charisma/youtrack-${APP_VERSION}.${APP_BUILD}.zip && \
+RUN wget -qO ${APP_NAME}.zip http://download.jetbrains.com/charisma/youtrack-${APP_VERSION}.${APP_BUILD}.zip && \
     unzip -q ${APP_NAME}.zip -x */internal/java/* && \
     mv youtrack-${APP_BUILD} $APP_NAME && \
     chown -R $APP_USER:$APP_USER $APP_DIR && \
-    rm ${APP_NAME}.zip && \
-    apk del .build-deps
+    rm ${APP_NAME}.zip
 
 USER $APP_USER
 WORKDIR $APP_DIR
