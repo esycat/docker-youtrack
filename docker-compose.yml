@@ -2,13 +2,12 @@ version: '2'
 
 services:
     youtrack:
-        build:
-            context: .
+        build: .
         image: esycat/youtrack
         container_name: youtrack
         restart: always
         ports:
-            - 80:8080
+            - 8082:8080
         volumes:
             - /etc/localtime:/etc/localtime:ro
             - /etc/timezone:/etc/timezone:ro
