@@ -37,7 +37,7 @@ RUN adduser -S -u $APP_UID -H -D $APP_USER && \
     rm $APP_DISTFILE
 
 # configuring the application
-RUN bin/youtrack.sh configure \
+RUN $APP_DIR/bin/youtrack.sh configure \
     --backups-dir $APP_HOME/backups \
     --data-dir    $APP_HOME/data \
     --logs-dir    $APP_HOME/log \
