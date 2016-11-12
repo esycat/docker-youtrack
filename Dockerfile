@@ -34,10 +34,10 @@ RUN adduser -S -u $APP_UID -H -D $APP_USER && \
     mv $APP_PREFIX/$APP_NAME-$APP_BUILD/ $APP_DIR/ && \
 #    mv $APP_PREFIX/$APP_DISTNAME/ $APP_DIR/ && \
     chown -R $APP_USER $APP_DIR && \
-    rm $APP_DISTFILE
+    rm $APP_DISTFILE && \
 
 # configuring the application
-RUN $APP_DIR/bin/youtrack.sh configure \
+    $APP_DIR/bin/youtrack.sh configure \
     --backups-dir $APP_HOME/backups \
     --data-dir    $APP_HOME/data \
     --logs-dir    $APP_HOME/log \
