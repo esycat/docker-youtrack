@@ -31,7 +31,8 @@ RUN adduser -S -u $APP_UID -H -D $APP_USER && \
 # removing downloads
     wget -q http://download.jetbrains.com/charisma/$APP_DISTFILE && \
     unzip -q $APP_DISTFILE -x */internal/java/* -d $APP_PREFIX && \
-    mv $APP_PREFIX/$APP_DISTNAME/ $APP_DIR/ && \
+    mv $APP_PREFIX/$APP_NAME-$APP_BUILD/ $APP_DIR/ && \
+#    mv $APP_PREFIX/$APP_DISTNAME/ $APP_DIR/ && \
     chown -R $APP_USER $APP_DIR && \
     rm $APP_DISTFILE
 
