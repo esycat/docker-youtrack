@@ -32,7 +32,7 @@ WORKDIR $APP_PREFIX
 RUN apk add -q --no-cache --virtual .build-deps wget unzip && \
     wget -qO ${APP_NAME}.zip https://download.jetbrains.com/charisma/youtrack-${APP_VERSION}.${APP_BUILD}.zip && \
     unzip -q ${APP_NAME}.zip -x */internal/java/* && \
-    mv youtrack-${APP_BUILD} $APP_NAME && \
+    mv youtrack-${APP_VERSION}.${APP_BUILD} $APP_NAME && \
     chown -R $APP_USER:$APP_USER $APP_DIR && \
     rm ${APP_NAME}.zip && \
     apk del .build-deps
