@@ -7,7 +7,7 @@ The image has been reworked to use Alpine instead of Ubuntu. As a consequence, t
 
 [YouTrack](https://jetbrains.com/youtrack/) is an issue tracking and project management tool from [JetBrains](https://jetbrains.com/).
 
-Version `7.0`, build `28110` (released November 7, 2016).
+Version `7.0`, build `29566` (released December 26, 2016).
 
 The image is based on [Alpine 3.4 with OpenJDK JRE 8](https://hub.docker.com/r/esycat/java/).
 
@@ -29,4 +29,4 @@ docker start youtrack
 ```
 
 ## Virtual Host
-Typically, we would like to run the YouTrack behind a lightweight HTTP server. [`etc/nginx`]() contains an example virtual host configuration for Nginx.
+Typically, we would like to run YouTrack behind a lightweight HTTP server. [`etc/nginx`]() contains an example virtual host configuration for Nginx.
