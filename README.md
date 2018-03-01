@@ -7,7 +7,7 @@ The image has been reworked to use Alpine instead of Ubuntu. As a consequence, t
 
 [YouTrack](https://jetbrains.com/youtrack/) is an issue tracking and project management tool from [JetBrains](https://jetbrains.com/).
 
-Version `2017.4`, build `39406` (released February 12, 2018).
+Version `2017.4`, build `39533` (released February 16, 2018).
 
 The image is based on [Alpine 3.4 with OpenJDK JRE 8](https://hub.docker.com/r/esycat/java/).
 
