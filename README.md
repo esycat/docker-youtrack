@@ -7,9 +7,9 @@ The image has been reworked to use Alpine instead of Ubuntu. As a consequence, t
 
 [YouTrack](https://jetbrains.com/youtrack/) is an issue tracking and project management tool from [JetBrains](https://jetbrains.com/).
 
-Version `2017.4`, build `39533` (released February 16, 2018).
+Version `2018.2`, build `43142` (released July 4, 2018).
 
-The image is based on [Alpine 3.4 with OpenJDK JRE 8](https://hub.docker.com/r/esycat/java/).
+The image is based on [Alpine 3.7 with OpenJDK JRE 8](https://hub.docker.com/r/esycat/java/).
 
 ## Persistent Data
 YouTrack is configured to store all data (including backups, logs and temporary files) under `/var/lib/youtrack` directory, which is also a Docker volume. In addition, `/opt/youtrack/conf` directory is used for configuration files.
